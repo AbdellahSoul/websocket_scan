@@ -30,7 +30,7 @@ def save(x):
 		
 def scanner(host):
 	sock=socket.socket()
-	sock.settimeout(5)
+	sock.settimeout(5000)
 	try:
 		sock.connect((str(host),80))
 		payload='GET / HTTP/1.1\r\nHost: {}\r\n\r\n'.format(host)
